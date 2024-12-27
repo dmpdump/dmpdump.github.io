@@ -440,7 +440,7 @@ It then likely sends the configuration from the C2 (which is passed as an argume
 
 ![sshot](/assets/images/koiloader/getcfg.png)
 
-Other stealing capabilities based on a quick triage of the stealer included browser data, sensitive application data, sticky notes, SSH keys.
+Other stealing capabilities based on a quick triage of the stealer revealed targeting of browser data, sensitive application data, sticky notes, SSH keys, etc.
 
 ![sshot](/assets/images/koiloader/browser_profiles.png)
 
@@ -457,10 +457,10 @@ Other stealing capabilities based on a quick triage of the stealer included brow
 The stealer also has a secondary loader capability, but I did not get any additional payload during analysis.
 
 # IOCs
-* Nullsoft installer e29d2bd946212328bcdf783eb434e1b384445f4c466c5231f91a07a315484819
-* guestwiseYtHA.exe 94bf4f12cb8929037f6ee10d424d5a7ef5f193147312e22866dce4e0d56c2143
-* KoiStealer bf1d3681259f26cb407d43e78988a13e1ba9256bd5d300d2eb63f55d937abbfe
-* C2 79.124.78\[.\]109
+* Nullsoft installer: e29d2bd946212328bcdf783eb434e1b384445f4c466c5231f91a07a315484819
+* guestwiseYtHA.exe: 94bf4f12cb8929037f6ee10d424d5a7ef5f193147312e22866dce4e0d56c2143
+* KoiStealer: bf1d3681259f26cb407d43e78988a13e1ba9256bd5d300d2eb63f55d937abbfe
+* C2: 79.124.78\[.\]109
 
 # Previous reports
 [https://malpedia.caad.fkie.fraunhofer.de/details/win.koistealer](https://malpedia.caad.fkie.fraunhofer.de/details/win.koistealer)
