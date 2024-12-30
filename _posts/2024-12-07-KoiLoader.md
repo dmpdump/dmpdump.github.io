@@ -463,4 +463,4 @@ The stealer also has a secondary loader capability, but I did not get any additi
 * C2: 79.124.78\[.\]109
 
 # Previous reports
-[https://malpedia.caad.fkie.fraunhofer.de/details/win.koistealer](https://malpedia.caad.fkie.fraunhofer.de/details/win.koistealer)
+* [https://malpedia.caad.fkie.fraunhofer.de/details/win.koistealer](https://malpedia.caad.fkie.fraunhofer.de/details/win.koistealer)
