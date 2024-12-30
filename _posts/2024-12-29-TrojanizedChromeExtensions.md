@@ -1,7 +1,7 @@
 ---
 title: Trojanized Chrome Extensions
 by: dmpdump
-tags: malware, chrome
+tags: malware chrome
 ---
 
 I rarely deal with malicious browser extensions, however, they are likely to become increasingly relevant in the future. It is commonly said that "the browser is the new OS", so it only makes sense for threat actors to write and deliver malware that runs in the context of the browser.
