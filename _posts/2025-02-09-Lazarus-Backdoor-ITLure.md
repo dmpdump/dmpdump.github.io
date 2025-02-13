@@ -60,7 +60,7 @@ After decrypting the C2 URL and connecting to the C2, the backdoor parses an HTM
 
 ![sshot](/assets/images/dprk_itsector/mainloop1.png)
 
-The backdoor implements 14 commands, some of which were not very obvious to me. It makes extensive use of files with the "PMS" prefix written to AppData\Local\Temp. These files are used by the backdoor to save the output of commands executed remotely, to save screenshots, and for the registration of DLLs.
+The backdoor implements 14 commands, some of which were not very clear to me. It makes extensive use of files with the "PMS" prefix written to AppData\Local\Temp. These files are used by the backdoor to save the output of commands executed remotely, to save screenshots, and for the registration of DLLs.
 
 | Command | Action |
 |----------|----------|
