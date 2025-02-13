@@ -1,7 +1,7 @@
 ---
 title: PUBLOAD Likely Delivered to Thailand via GrimResource MSC
 by: dmpdump
-tags: malware RE CTI
+tags: malware RE CTI apt cn
 ---
 
 On December 20, 2024, a Microsoft Management Console (MSC) file named "Invitation Letter.msc" was uploaded from Thailand to VirusTotal.
