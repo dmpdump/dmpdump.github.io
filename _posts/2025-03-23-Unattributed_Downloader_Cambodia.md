@@ -4,7 +4,7 @@ by: dmpdump
 tags: cti malware
 ---
 
-On March 20, 2025, MalwareHunterTeam shared a sample of a ZIP file containing an LNK, uploaded from Cambodia:
+On March 20, 2025, [MalwareHunterTeam](https://x.com/malwrhunterteam/status/1902710467341980017) shared a sample of a ZIP file containing an LNK, uploaded from Cambodia:
 
 ![sshot](/assets/images/shellcode_cambodia/mht.png)
 
