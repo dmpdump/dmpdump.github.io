@@ -111,7 +111,7 @@ del /s /a /q /f R.bat
 endlocal
 ```
 
-`Notepad++.exe` is a legitimate version of WinGup for NotePad++. This executable loads the `libcurl.dll` via its Import Address Table. The threat actor delivered a malicious DLL for DLL Hijacking purposes.
+`Notepad++.exe` is a legitimate version of WinGup for NotePad++. This executable loads the `libcurl.dll`. The threat actor delivered a malicious DLL for DLL Hijacking purposes.
 
 ![sshot](/assets/images/shellcode_cambodia/notepimport.png)
 
@@ -139,7 +139,7 @@ When the DLL is loaded and `curl_easy_init` is called, a new thread is created t
 
 ![sshot](/assets/images/shellcode_cambodia/curldecrypt.png)
 
-* Then, it decrypts strings for curl.dll's exported functions `checkper` and `setper`. First it calls the `checkper` function. If it returns fakse, it calls `setper`.
+* Then, it decrypts strings for curl.dll's exported functions `checkper` and `setper`. First it calls the `checkper` function. If it returns false, it calls `setper`.
 
 ![sshot](/assets/images/shellcode_cambodia/export_dec.png)
 
@@ -164,7 +164,7 @@ Reviewing the loaded `curl.dll`, we can see that this is not related to curl. Th
 
 ![sshot](/assets/images/shellcode_cambodia/uas.png)
 
-Unfortunately, as of this writing, I have not been able to obtain the next-stage encrypted shellcode to continue the analysis. Various elements of the infection chain suggest that this is targeted activity, including the lures, the techniques, and the attempts to clean up traces. These are not only recent uploads to VirusTotal, but the likely compilation time also suggests this is recent activity, with `libcurl.dll` and `curl.dll` having close timestamps.
+Unfortunately, as of this writing, I have not been able to obtain the next-stage encrypted shellcode to continue the analysis. Various elements of the infection chain suggest that this is targeted activity, including the lures, the techniques, and the attempts to clean up traces. The Virus Total upload dates and the likely compilation times suggest that this recent activity, with `libcurl.dll` and `curl.dll` having close timestamps.
 
 `libcurl.dll` metadata:
 
@@ -178,6 +178,13 @@ While we don't have a PDB path from the `libcurl.dll`, we can still get a path f
 
 ![sshot](/assets/images/shellcode_cambodia/pdb.png)
 
+`easyboxsync[.]com` is hosted in Cloudflare:
+
+![sshot](/assets/images/shellcode_cambodia/dns.png)
+
+This domain used for the payload download is relatively recent:
+
+![sshot](/assets/images/shellcode_cambodia/domain.png)
 
 # IOCs
 * CNP_MFA_Meeting_Documents.zip: a2c128fc040ed2db7634134f0577b3267164b71f692fc9b37c08e48b168d89e6
