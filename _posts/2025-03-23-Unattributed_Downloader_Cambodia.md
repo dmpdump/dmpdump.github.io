@@ -187,6 +187,7 @@ This domain used for the payload download is relatively recent:
 ![sshot](/assets/images/shellcode_cambodia/domain.png)
 
 # IOCs
+* Domain: https://live.easyboxsync[.]com/resources/gup/notepad
 * CNP_MFA_Meeting_Documents.zip: a2c128fc040ed2db7634134f0577b3267164b71f692fc9b37c08e48b168d89e6
 * Meeting_Staff_List.lnk: 7e0da1399ff99e41493db489159668db566b6b00cd367e770619b774ec515809
 * Resources.zip: badd970fab64c072e5ab0a81865de0988c1b12165a076bcdbee8a9cb8e101675
