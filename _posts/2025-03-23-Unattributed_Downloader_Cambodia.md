@@ -178,7 +178,7 @@ While we don't have a PDB path from the `libcurl.dll`, we can still get a path f
 
 ![sshot](/assets/images/shellcode_cambodia/pdb.png)
 
-`easyboxsync[.]com` is hosted in Cloudflare:
+`easyboxsync[.]com` is behind Cloudflare:
 
 ![sshot](/assets/images/shellcode_cambodia/dns.png)
 
