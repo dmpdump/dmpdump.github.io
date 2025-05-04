@@ -148,7 +148,7 @@ After some initial requests without any reponses, I obtained two payloads:
 ![sshot](/assets/images/bdoor_tw/response.png)
 
 The first payload I received is a Python script which creates a Visual Basic persistence script named `start.vbs`. The script searches for the running processes, if it finds that python.exe is running, it exits. If it is not running, it runs the initial setup.py (the backdoor) with python.exe. Additionally, it creates a scheduled task named `TaskMachineCore`, which runs every 10 minutes, executing the newly created `start.vbs` persistence script.
-
+S
 ```python
 pwd = os.path.abspath(os.path.dirname(__file__))
 fvb2 = pwd+'\\start.vbs'
