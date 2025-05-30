@@ -99,7 +99,7 @@ The function I named `fn_pload_decrypt_dll_patch` implements a custom decryption
 ![sshot](/assets/images/apt32_mst/enc_blob.png)
 
 The blob is subsequently decrypted using a combination of AES-256 in ECB mode with XOR, in 16-byte blocks. The decryption algorithm does the following:
-* It AES decrypts the first 16 bytes of the encrypted blob but does not apply XOR decryption. This will be the header of the decrypted buffer.
+* It AES decrypts the first 16 bytes of the encrypted blob but does not apply XOR decryption. This will be the header of the decrypted buffer
 * The second 16-byte block is AES-decrypted, using that decrypted block as the XOR key for the first 16-byte block of the encrypted blob
 * The third 16-byte block is AES-decrypted, using those bytes as the XOR key for the second 16-byte block of the encrypted blob
 * It continues incrementing the blocks applying AES-decryption and using the decrypted bytes as the XOR key for the previous 16-byte block
