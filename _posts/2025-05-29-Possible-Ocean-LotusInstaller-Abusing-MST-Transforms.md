@@ -138,7 +138,7 @@ The last stage is another shellcode. This final implant is written in Rust, it h
 
 At a high level, we can summarize the complete infection chain with the following diagram:
 
-![sshot](/assets/images/apt32_mst/diagram.png)
+![sshot](/assets/images/apt32_mst/Diagram.png)
 
 
 # Related Samples
