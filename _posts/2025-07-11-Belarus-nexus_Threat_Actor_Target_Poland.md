@@ -8,7 +8,7 @@ On June 30, 2025, a file named `deklaracja.chm` ("declaration.chm") was uploaded
 
 ![sshot](/assets/images/Belarus_Poland/vtsubmission.png)
 
-The file is a Microsoft Compiled HTML Help file, a proprietary online help format which consists of a binary that contains a collection of compressed files, including HTML files and other objects. Decompressing `declaracja.chm`, we can see the following files:
+The file is a Microsoft Compiled HTML Help file, a proprietary online help format which consists of a binary that contains a collection of compressed files, including HTML files and other objects. Decompressing `deklaracja.chm`, we can see the following files:
 
 ![sshot](/assets/images/Belarus_Poland/content.png)
 
