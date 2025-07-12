@@ -17,7 +17,7 @@ The files with the `#` prefix are standard CHM files. The rest of the files are 
 * `desktop.mp3` is cabinet file which contains a downloader DLL
 * `deklaracja.png` is a decoy image of a bank transfer receipt from PKO Bank, a Polish bank
 
-CHM files are executed by `hh.exe` by default. When `deklaracja.chm` is executed, we see a decoy image displayed to the victim. We can also observer a series of processes that lead to the extraction and execution of a DLL named `unt32.dll`.
+CHM files are executed by `hh.exe` by default. When `deklaracja.chm` is executed, we see a decoy image displayed to the victim. We can also observe a series of processes that lead to the extraction and execution of a DLL named `unt32.dll`.
 
 ![sshot](/assets/images/Belarus_Poland/decoy.png)
 
@@ -59,7 +59,7 @@ The command executed by the CHM:
 
 # Downloader
 
-`uNT32.dll` is a C++ downloader with XOR-encrypted strings. The core download functionality of this DLL is implemented at offset `0x421487`, followed by a PE header validation function which, if unsuccessful, leads to program termination.
+`uNT32.dll` is a C++ downloader with XOR-encrypted strings. The core download functionality of this DLL is implemented at offset `0x403720`, followed by a PE header validation function which, if unsuccessful, leads to program termination.
 
 ![sshot](/assets/images/Belarus_Poland/dll1.png)
 
@@ -78,7 +78,10 @@ The downloaded payload is read into a buffer which is size checked. The size che
 ![sshot](/assets/images/Belarus_Poland/dll5.png)
 
 Unfortunately, I could not retrieve a copy of `the-magnus-protoco1.jpg` with payload. I found an image with the same name and delivered from the same infrastructure, however, the size of that image is 289109 bytes, with no anomalies after the .jpg end marker (`FF D9`). Based on the DLL's size verification code, no decryption would take place if the size of the image is exactly 289109 bytes. This leads me to believe that at some point the threat actor may have hosted benign images, either temporarily or for unintended downloaders (e.g. if geolocation was implemented). A malicious image delivering payload is very likely the same image that I found with content added after the `FF D9` end marker. This is likely because the downloader strips the exact same number of bytes that the image I found has.
-The benign image is related to Rusty Quill:
+
+![sshot](/assets/images/Belarus_Poland/goodimage1.png)
+
+The benign image (d3f0f747e56431c6d7c0259bc2afa2769898810140e8382af55d8297142a8529) is related to Rusty Quill:
 
 ![sshot](/assets/images/Belarus_Poland/goodimage.png)
 
