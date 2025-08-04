@@ -258,5 +258,6 @@ Another related report was [published by Palo Alto Unit42](https://unit42.paloal
 * config.exe: 1cb0560f614cc850422171ffe6b0b9f6b9ceaec4fe3516bc8493f253076470ab
 * 4.pdf: 50fbe429848e16f08a6dbf6ce6d5bbff44db1e009f560e8b8c4cde6cff0a768b
 * arphadump64.dll: a41c06ad948f3a21496e4d1f6b622ca84a365dd2087b710ed3e7f057e7a2a3f8
+* C2: m.123huodong.com.cloud.cdntip.com.s2-web.dogedns[.]com
 
 
