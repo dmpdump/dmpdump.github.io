@@ -4,7 +4,7 @@ by: dmpdump
 tags: malware hongkong cobaltstrike
 ---
 
-On July 17, 2025, an ISO image with moderate detection was updated to VirusTotal from Hong Kong.
+On July 18, 2025, an ISO image with moderate detection was updated to VirusTotal from Hong Kong.
 
 ![sshot](/assets/images/hkcobaltstrike/vtsubmission.png)
 
@@ -231,7 +231,7 @@ The infinite loop patch to the entry point, for better visualization:
 6:  eb f9                   jmp    0x1 
 ```
 
-Locking the loader executable with an infinite patch likely serves the purpose of blocking the normal execution flow of `config.exe` while maintaining the persistent execution of the malicious Cobalt Strike thread. The infinite patch likely avoids thread synchronization issues or early termination/crashes due to the execution of the malicious DLL. This Cobalt Strike loader was compiled on July 16, 2025 (one day before the sample was uploaded to VirusTotal) and its original name is `ldrunlock.dll`. The original DLL name was likely derived from the infinite patch implemented in the loader executable. 
+Locking the loader executable with an infinite patch likely serves the purpose of blocking the normal execution flow of `config.exe` while maintaining the persistent execution of the malicious Cobalt Strike thread. The infinite patch likely avoids thread synchronization issues or early termination/crashes due to the execution of the malicious DLL. This Cobalt Strike loader was compiled on July 16, 2025 (two days before the sample was uploaded to VirusTotal) and its original name is `ldrunlock.dll`. The original DLL name was likely derived from the infinite patch implemented in the loader executable. 
 
 ![sshot](/assets/images/hkcobaltstrike/dllheader.png)
 
