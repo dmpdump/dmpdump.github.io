@@ -217,11 +217,11 @@ Retry_Duration                   - 0
 
 # Entry Point Patching
 
-After creating the threads for the Beacon and decoy PDF, the loader implements an infinit loop patch in the entry point of the loading executable (`config.exe`). The patch is implemented by calling `K32GetModuleInformation` and getting a pointer to the `MODULEINFO` structure. A patch with bytes that implement an infinit loop is then written to the entry point of `config.exe`, locating it via the `EntryPoint` member of `MODULEINFO`.
+After creating the threads for the Beacon and decoy PDF, the loader implements an infinite loop patch in the entry point of the loading executable (`config.exe`). The patch is implemented by calling `K32GetModuleInformation` and getting a pointer to the `MODULEINFO` structure. A patch with bytes that implement an infinite loop is then written to the entry point of `config.exe`, locating it via the `EntryPoint` member of `MODULEINFO`.
 
 ![sshot](/assets/images/hkcobaltstrike/entrypatch.png)
 
-The infinit loop patch to the entry point, for better visualization:
+The infinite loop patch to the entry point, for better visualization:
 
 ```
 0:  eb 00                   jmp    0x2
@@ -231,7 +231,7 @@ The infinit loop patch to the entry point, for better visualization:
 6:  eb f9                   jmp    0x1 
 ```
 
-Locking the loader executable with an infinit patch likely serves the purpose of blocking the normal execution flow of `config.exe` while maintaining the persitent execution of the malicious Cobalt Strike thread. The infinit patch likely avoids thread synchronization issues or early termination/crashes due to the execution of the malicious DLL. This Cobalt Strike loader was compiled on July 16, 2025 (one day before the sample was uploaded to VirusTotal) and its original name is `ldrunlock.dll`. The original DLL name was likely derived from the infinit patch implemented in the loader executable. 
+Locking the loader executable with an infinite patch likely serves the purpose of blocking the normal execution flow of `config.exe` while maintaining the persistent execution of the malicious Cobalt Strike thread. The infinite patch likely avoids thread synchronization issues or early termination/crashes due to the execution of the malicious DLL. This Cobalt Strike loader was compiled on July 16, 2025 (one day before the sample was uploaded to VirusTotal) and its original name is `ldrunlock.dll`. The original DLL name was likely derived from the infinite patch implemented in the loader executable. 
 
 ![sshot](/assets/images/hkcobaltstrike/dllheader.png)
 
