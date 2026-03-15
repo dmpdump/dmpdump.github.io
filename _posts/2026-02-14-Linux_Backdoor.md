@@ -78,7 +78,7 @@ If the byte with value `0xC7` is received at the expected offset, a new request 
 
 The backdoor commands are handled in a command dispatcher function named `main_proc`. Before implementing the command dispatching capabilities, the backdoor sends victim information to the C2. All the traffic between the victim and the C2 is RC4 encrypted with the key referenced before. Before implementing the command dispatching capabilities, the backdoor sends system information to the C2 with a function appropriately named `send_systeminfo`. The information is sent with the following format:
 
-`generated uid|hostname|connection state|unknown value|sysname|nodename|release|version|machine|domain name|`
+`generated uid|hostname|connection state|unknown_value|sysname|nodename|release|version|machine|domain name|`
 
 The uid generated for each victim will be based on the mac address. If the mac address cannot be obtained, a random per-victim uid is generated. The majority of the system information is retrieved from the [utsname](https://man7.org/linux/man-pages/man2/uname.2.html) struct, as can be seen below:
 
@@ -140,7 +140,7 @@ xor_ip_int = ip_int ^ key
 
 print(socket.inet_ntoa(struct.pack(">I", xor_ip_int)))
 ```
-we obtain the following IP address: `77.220.79[.]90`. I did not interact with this IP address, and I cannot confirm if it is an actual C2 or not. The IP, however, was associated with a Mikrotik router that could have been compromised and used as a C2. Interestingly, the router seems to have exposed port 8291, which has been associated with exploitation in the past.
+...we obtain the following IP address: `77.220.79[.]90`. I did not interact with this IP address, and I cannot confirm if it is an actual C2 or not. The IP, however, was associated with a Mikrotik router that could have been compromised and used as a C2. Interestingly, the router seems to have exposed port 8291, which has been associated with exploitation in the past.
 
 ![sshot](/assets/images/linuxbackdoor/mikrotik.png)
 
