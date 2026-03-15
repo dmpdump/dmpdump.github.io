@@ -78,7 +78,7 @@ If the byte with value `0xC7` is received at the expected offset, a new request 
 
 The backdoor commands are handled in a command dispatcher function named `main_proc`. Before implementing the command dispatching capabilities, the backdoor sends victim information to the C2. All the traffic between the victim and the C2 is RC4 encrypted with the key referenced before. Before implementing the command dispatching capabilities, the backdoor sends system information to the C2 with a function appropriately named `send_systeminfo`. The information is sent with the following format:
 
-`generated uid|hostname|connection state|unknown_value|sysname|nodename|release|version|machine|domain name|`
+`generated_uid|hostname|connection_state|unknown_value|sysname|nodename|release|version|machine|domain name|`
 
 The uid generated for each victim will be based on the mac address. If the mac address cannot be obtained, a random per-victim uid is generated. The majority of the system information is retrieved from the [utsname](https://man7.org/linux/man-pages/man2/uname.2.html) struct, as can be seen below:
 
@@ -146,7 +146,7 @@ print(socket.inet_ntoa(struct.pack(">I", xor_ip_int)))
 
 # Mac version of the backdoor
 
-In addition to the ELF copy of the backdoor, a Mach-O copy exists in Virus Total. The Mach-O version has the following attributes:
+In addition to the ELF copy of the backdoor, a Mach-O copy exists in VirusTotal. The Mach-O version has the following attributes:
 * FileName: ChromeUpdates
 * SHA2: bcffe674c4425634d4750bb21a505be9ce35e31413d2e6cce75ad0c609563cc5 
 
