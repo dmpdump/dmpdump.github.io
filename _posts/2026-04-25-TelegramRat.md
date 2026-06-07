@@ -270,8 +270,8 @@ The use of Rebex libraries for malware purposes is, as far as I know, rare. Howe
 Various elements in the infection chain suggest this is targeted threat activity against Vietnam, and various techniques have been used in the past by targeted threat actors in the region. However, at this point I cannot correlate this to any specific threat actor with high confidence.
 
 # IOCs  
-* CV - Vu PLPC So2156516.zip: 6db64b44305ff125f729713d7ff516e84e4ca38504a2ab0571eb19597f49feee
-* Word Document - CV - Vu PLPC KT nam 2026.chm: a0d5b30578acd1df9139e7a8a4bfc659dc2cf48f4dc0c5804b70890adeb9fa21
-* ioy24euj.dll: 67b51a73c72f39b9cf41dd35eb22b369713ab2e576641b40b9089ebc9d4a1fb2
-* Telegram RAT (decrypted): 1323278360d41a74ab09d310f08902087ff2798d1eda99be65d07c1b1123a25c
+* `CV - Vu PLPC So2156516.zip`: 6db64b44305ff125f729713d7ff516e84e4ca38504a2ab0571eb19597f49feee
+* `Word Document - CV - Vu PLPC KT nam 2026.chm`: a0d5b30578acd1df9139e7a8a4bfc659dc2cf48f4dc0c5804b70890adeb9fa21
+* `ioy24euj.dll`: 67b51a73c72f39b9cf41dd35eb22b369713ab2e576641b40b9089ebc9d4a1fb2
+* `Telegram RAT (decrypted)`: 1323278360d41a74ab09d310f08902087ff2798d1eda99be65d07c1b1123a25c
 

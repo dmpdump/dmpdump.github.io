@@ -152,10 +152,10 @@ In addition to the ELF copy of the backdoor, a Mach-O copy exists in VirusTotal.
 
 
 # IOCs
-* out_linux.tar: 8e4f33722c16a5e922a81a4be61db804bbf2e899d89902085e854b7f0a0d587f
-* netd: be0f36ee071a9c0c200dcdaed98fce7fadc31305d0a5f24a244a3af7833d21dd
-* netd.lck: 78e145fcc9f099a1dec49f9001bfbb06366fcf30f66a7cc9e6605b36019dfac4
-* ChromeUpdates: bcffe674c4425634d4750bb21a505be9ce35e31413d2e6cce75ad0c609563cc5 
-* chopaw.camdvr[.]org
-* drawpin.accesscam[.]org
-* mefng.giize[.]com:443
+* `out_linux.tar`: 8e4f33722c16a5e922a81a4be61db804bbf2e899d89902085e854b7f0a0d587f
+* `netd`: be0f36ee071a9c0c200dcdaed98fce7fadc31305d0a5f24a244a3af7833d21dd
+* `netd.lck`: 78e145fcc9f099a1dec49f9001bfbb06366fcf30f66a7cc9e6605b36019dfac4
+* `ChromeUpdates`: bcffe674c4425634d4750bb21a505be9ce35e31413d2e6cce75ad0c609563cc5 
+* `chopaw.camdvr[.]org`
+* `drawpin.accesscam[.]org`
+* `mefng.giize[.]com:443`
