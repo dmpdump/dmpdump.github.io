@@ -1,5 +1,5 @@
 ---
-title: Low Detection Linux Implant with Hands-On Intrusion Capabilities
+title: Analysis of a Low-Detection Linux Implant with Hands-On Intrusion Capabilities
 by: dmpdump
 tags: backdoor ELF Linux
 ---
