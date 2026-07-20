@@ -197,8 +197,8 @@ The agent supports the following commands:
 | 0x27        | Kills the connection to a peer | Likely related to peer connection from 0x26      |
 | 0x29/0x2A   | Returns "no agetty"   | This looks like a feature that is not implemented yet      |
 | 0x2D        | Opens a listener  | Binds to all interfaces. Accepts connections from any reachable host   |
-| 0x2E        | Closes a listener   | Likely related to listeners opened via 0x2D    |
-| 0x2F        | Root directory enumeration   | Minimal command that likely returns "/"  |
+| 0x2E        | Closes a listener   | Likely related to listeners opened via 0x2D     |
+| 0x2F        | Root directory enumeration   | Minimal command that likely returns "/"   |
 | default     | Returns "unknown"     |
 
 Overall, this looks like a low prevalence Linux implant with the capabilities that could be expected in malware used in a hands-on / targeted intrusion on a network. The capability to establish reverse tunnels, use the malware for pivoting, the implementation of port forwarding, and the multiple file extraction options suggest that this could potentially be used in a targeted intrusion.
