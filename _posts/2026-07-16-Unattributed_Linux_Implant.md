@@ -4,6 +4,8 @@ by: dmpdump
 tags: backdoor ELF Linux
 ---
 
+__UPDATE:__ After reviewing related infra found by [@500mk500](https://x.com/500mk500) and a related sample by [@malwrhunterteam](https://x.com/malwrhunterteam), I found quite a few similarities with the Adaptix Agent using the adaptix_gopher protocol.
+
 In early July 2026, [MalwareHunterTeam](https://x.com/malwrhunterteam) shared an interesting ELF named `gregbfdah.png` with minimal detection in VirusTotal. The ELF was uploaded to VirusTotal on 2026-06-16 and it still has very low detection. The file was delivered from the following AWS domain: `https://zapier-logos.s3.amazonaws[.]com/gregbfdah.png`. That URL was first submitted to VirusTotal from India on 2026-06-11.
 
 The file in question is a statically-linked x86-64 Linux ELF backdoor/C2 implant written in C++, possibly still in development. 
