@@ -4,7 +4,7 @@ by: dmpdump
 tags: backdoor afghanistan pakistan
 ---
 
-On August 29, 2026, a ZIP file containing an executable named `Special Job Opportunities and Recruitment Information in Various Ministries of Afghanistan.exe` and a DLL named `dgxi.dll` was uploaded to Virus Total from Afghanistan. The executable name and the upload origin suggest the likely targeting of an Afghanistan government agency. As expected, the executable is a legitimate executable (`ApplicationHost.exe`, a Windows IIS executable), and the DLL is a malicious library that is side-loaded by the renamed executable.
+On August 29, 2026, a ZIP file containing an executable named `Special Job Opportunities and Recruitment Information in Various Ministries of Afghanistan.exe` and a DLL named `dgxi.dll` was uploaded to Virus Total from Afghanistan. The executable name and the upload origin suggest the likely targeting of an Afghanistan government agency. As expected, the executable is a legitimate executable (`ApplicationFrameHost.exe`, a Windows executable), and the DLL is a malicious library that is side-loaded by the renamed executable.
 
 ![Zip Content](/assets/images/bdoorafg/zipcontent.png)
 *Figure 1: Zip content.*
@@ -13,7 +13,7 @@ A review of the side-loaded DLL revealed a targeted backdoor using the following
 
 ## Backdoor Overview
 
-The DLL establishes persistence by making a copy of the renamed ApplicationHost.exe executable using `GetModuleFileNameW` to retrieve its own path and copying itself and the accompanying DLL to `%AppData%\Microsoft\ApplicationHost\`. The executable is copied with its original name (`ApplicationHost.exe`). Persistent execution is established using the common registry run key `HKCU\Software\Microsoft\Windows\CurrentVersion\Run`.
+The DLL establishes persistence by making a copy of the renamed ApplicationHost.exe executable using `GetModuleFileNameW` to retrieve its own path and copying itself and the accompanying DLL to `%AppData%\Microsoft\ApplicationHost\`. The executable is copied as `ApplicationHost.exe`. Persistent execution is established using the common registry run key `HKCU\Software\Microsoft\Windows\CurrentVersion\Run`.
 
 ![Persist2](/assets/images/bdoorafg/persist2.png)
 *Figure 2: Registry run key.*
