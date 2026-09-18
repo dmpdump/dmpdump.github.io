@@ -1,7 +1,7 @@
 ---
 title: Unattributed Shellcode Loader Likely Targeting Cambodia
 by: dmpdump
-tags: cti malware
+tags: shellcode cambodia
 ---
 
 On March 20, 2025, [MalwareHunterTeam](https://x.com/malwrhunterteam/status/1902710467341980017) shared a sample of a ZIP file containing an LNK, uploaded from Cambodia:

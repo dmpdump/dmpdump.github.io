@@ -1,7 +1,7 @@
 ---
 title: Likely Chinese Threat Actor Uses Low Detection Linux Backdoor and NHAS Reverse SSH
 by: dmpdump
-tags: cti malware elf linux
+tags: backdoor china linux
 ---
 
 On April 22, 2025, [MalwareHunterTeam](https://x.com/malwrhunterteam/status/1914632170129309952) shared a hash for a low detection Linux ELF with 2 hard-coded IP addresses: 43.159.18[.]135 and 119.42.148[.]187. Upon review of the executable (ea41b2bf1064efcb6196bb79b40c5158fc339a36a3d3ddee68c822d797895b4e), I found an interesting backdoor written in C that uses a local proxy to execute payload from attacker infrastructure via an external SOCKS5 proxy. The ELF is a 64-bit executable, has stripped symbols and was compiled with GCC.

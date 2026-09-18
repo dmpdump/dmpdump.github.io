@@ -1,7 +1,7 @@
 ---
 title: Havoc Demon Targeting Pakistan International Airlines
 by: dmpdump
-tags: malware havoc apt
+tags: pakistan havoc
 ---
 
 Back in January 2025, I reviewed a [campaign](https://dmpdump.github.io/posts/Havoc/) delivering Havoc Demon to targets in Bangladesh, Pakistan, and China via LNK files. While hunting for new threats this month, I came across an malicious Word document uploaded from Pakistan which leads to a very similar infection chain, very likely attributable to the same threat actor. It is rare to find malicious macro-enabled Office documents these days, but I felt nostalgic and decided to take a look.

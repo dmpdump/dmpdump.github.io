@@ -1,7 +1,7 @@
 ---
 title: KoiLoader/KoiStealer
 by: dmpdump
-tags: malware RE
+tags: stealer koiloader koistealer
 ---
 
 On November 29,2024, MalwareHunterTeam posted the following sample in X:

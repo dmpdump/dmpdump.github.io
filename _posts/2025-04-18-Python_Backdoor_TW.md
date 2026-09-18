@@ -1,7 +1,7 @@
 ---
 title: Python Backdoor Uploaded from Taiwan
 by: dmpdump
-tags: cti malware python
+tags: taiwan backdoor python
 ---
 
 On April 18, 2025, I came across an interesting LNK file uploaded from Taiwan (f4bb263eb03240c1d779a00e1e39d3374c93d909d358691ca5386387d06be472), which I subsequently found had been initially discovered by [@NtAlertThread](https://x.com/ElementalX2/status/1913247237771083802). Props to him for the discovery.

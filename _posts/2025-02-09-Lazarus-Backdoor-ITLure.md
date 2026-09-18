@@ -1,7 +1,7 @@
 ---
 title: Lazarus Backdoor with IT Lure
 by: dmpdump
-tags: cti malware apt dprk cti
+tags: dprk backdoor
 ---
 
 On January 27, 2025, [@smica83](https://x.com/smica83/status/1883855708963442892) shared a sample on X indicating that it looked like Lazarus malware. I reviewed the sample and concluded that, indeed, it is a North Korean backdoor, likely the latest version of a backdoor publicly tracked as PEBBLEDASH.

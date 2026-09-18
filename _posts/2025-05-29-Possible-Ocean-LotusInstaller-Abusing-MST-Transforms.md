@@ -1,7 +1,7 @@
 ---
 title: Possible APT32/Ocean Lotus Installer abusing MST Transforms
 by: dmpdump
-tags: cti malware mst oceanlotus vietnam
+tags: vietnam msi apt32
 ---
 
 While monitoring new threats, I came across an interesting ISO image (ced7fe9c5ec508216e6dd9a59d2d5193a58bdbac5f41a38ea97dd5c7fceef7a5) uploaded to VirusTotal from Taiwan on May 20, 2025. The ISO contained 3 files:

@@ -1,7 +1,7 @@
 ---
 title: Modified XWORM Distribution by Chinese-Speaking Threat Actor
 by: dmpdump
-tags: cti malware xworm
+tags: xworm
 ---
 
 While hunting for MSI installers that typically distribute Gh0stRAT and RATs that share some of the Gh0stRAT code, such as WinOS/ValleyRAT, I came across an infection chain leading to a slightly modified `XWORM RAT`:  

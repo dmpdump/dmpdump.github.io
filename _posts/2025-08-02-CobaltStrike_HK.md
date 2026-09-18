@@ -1,7 +1,7 @@
 ---
 title: SLOW#TEMPEST Cobalt Strike Loader
 by: dmpdump
-tags: malware hongkong cobaltstrike
+tags: hongkong cobaltstrike
 ---
 
 On July 18, 2025, an ISO image with moderate detection was updated to VirusTotal from Hong Kong.

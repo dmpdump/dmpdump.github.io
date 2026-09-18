@@ -1,7 +1,7 @@
 ---
 title: Likely Belarus-Nexus Threat Actor Delivers Downloader to Poland
 by: dmpdump
-tags: malware chm belarus poland apt
+tags: poland belarus downloader
 ---
 
 On June 30, 2025, a file named `deklaracja.chm` ("declaration.chm") was uploaded to VirusTotal from Poland.
