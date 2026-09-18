@@ -13,7 +13,7 @@ A review of the side-loaded DLL revealed a targeted backdoor using the following
 
 ## Backdoor Overview
 
-The DLL establishes persistence by making a copy of the renamed ApplicationHost.exe executable using `GetModuleFileNameW` to retrieve its own path and copying itself and the accompanying DLL to `%AppData%\Microsoft\ApplicationHost\`. The executable is copied as `ApplicationHost.exe`. Persistent execution is established using the common registry run key `HKCU\Software\Microsoft\Windows\CurrentVersion\Run`.
+The DLL establishes persistence by making a copy of the renamed ApplicationFrameHost.exe executable using `GetModuleFileNameW` to retrieve its own path and copying itself and the accompanying DLL to `%AppData%\Microsoft\ApplicationHost\`. The executable is copied as `ApplicationHost.exe`. Persistent execution is established using the common registry run key `HKCU\Software\Microsoft\Windows\CurrentVersion\Run`.
 
 ![Persist2](/assets/images/bdoorafg/persist2.png)
 *Figure 2: Registry run key.*
