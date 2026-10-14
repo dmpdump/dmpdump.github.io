@@ -17,11 +17,11 @@ Some of the interesting things in the PDB path include:
 * The `TAHVILAT` folder, which may refer to `deliveries` in Persian.
 * The `mehr` folder. `Mehr` is the month of September/October in the Persian calendar.
 
-The references to Persian words in the PDB path suggest with low confidence a potential Iranian origin of the malware developer. The potential Iranian origin of the malware could be consistent with a possible target in Iraq (based on the submission geolocation). There are [recent reports](https://dreamgroup.com/blog/darkblinders-inside-an-active-espionage-campaign) indicating Iran-nexus threat activity targeting the Kurdistan region of Iraq.
+The references to Persian words in the PDB path suggest with low confidence a potential Iranian origin of the malware developer. That Iranian origin could be consistent with a possible target in Iraq, based on the submission geolocation. There are [recent reports](https://dreamgroup.com/blog/darkblinders-inside-an-active-espionage-campaign) indicating Iran-nexus threat activity targeting the Kurdistan region of Iraq. However, additional indicators are needed for a higher confidence attribution.
 
 ## Document.exe Downloader
 
-A review of  `document.exe` revealed a downloader compiled using MSVC. The downloader first performs API resolution by walking the PEB to locate the base address of `kernel32.dll`, avoiding any initial imports. It then locates `LoadLibraryA` by computing its FNV-1a hash and walking kernel32’s export table directly, avoiding the use of `GetProcAddress`. `LoadLibraryA` is then called to load additional DLLs, and their exports are also resolved via FNV-1a export table walking. Resolved APIs are stored as function pointers for further calling in subsequent functions.
+A review of  `document.exe` revealed a downloader compiled using MSVC. The downloader first performs API resolution by walking the PEB to locate the base address of `kernel32.dll`. It then locates `LoadLibraryA` by computing its FNV-1a hash and walking kernel32’s export table directly, avoiding the use of `GetProcAddress`. `LoadLibraryA` is then called to load additional DLLs, and their exports are also resolved via FNV-1a export table walking. Resolved APIs are stored as function pointers for further calling in subsequent functions.
 
 ![fnv1a1](/assets/images/websockbdoor/fnv1a1.png)
 *Figure 2: LoadLibraryA Resolution.*
@@ -89,7 +89,7 @@ Finally, it performs the file downloads in a function I renamed to `fn_file_down
 ![file check and download](/assets/images/websockbdoor/filecheckanddownload.png)
 *Figure 7: File Check and Download*
 
-The file download function creates the destination folder `AppData\Roaming\Microsoft\Protect\NV` and creates a new thread to download the next stage files. The download sequence includes a HEAD request to check the size of the response header and a GET request to download the files using the WinHttp API.
+The file download function creates the destination folder `AppData\Roaming\Microsoft\Protect\NV` and creates a new thread to download the next stage files. The download sequence includes a HEAD request to check the length of the response body and a GET request to download the files using the WinHttp API.
 
 The HEAD request checks the `WINHTTP_QUERY_CONTENT_LENGTH` InfoLevel flag via `WinHttpQueryHeaders`, which retrieves the size of the resource in bytes. The integer '5' for the content length can be validated in the [ReactOS documentation](https://doxygen.reactos.org/dd/d59/winhttp_8h.html#a0a4cca98682a3aef78338072e4698110). This request uses the `Mozilla/5.0 (Windows NT 10.0; Win64; x64)` user-agent string. The retrieved length is passed as an argument to function that downloads files via GET requests.
 
@@ -120,7 +120,7 @@ The payload downloaded from  `153.75.247[.]94` includes `nvcontainer.exe`, the n
 ![file check and download](/assets/images/websockbdoor/downloadedfiles.png)
 *Figure 11: Downloaded Files*
 
-Finally, `nvcontainer.exe` is executed. Before executing it, the downloader deletes the Mark of the Web by calling the `DeleteFileA` API to delete the zone identifier from the Alternate Data Stream (`nvcontainer.exe:Zone.Identifier`).
+Finally, `nvcontainer.exe` is executed. Before executing it, the downloader attempts to delete the Mark of the Web by calling the `DeleteFileA` API to delete the zone identifier from the Alternate Data Stream (`nvcontainer.exe:Zone.Identifier`).
 
 ![zone identifier removal](/assets/images/websockbdoor/motwremoval.png)
 *Figure 12: Zone Identifier Removal*
@@ -197,7 +197,7 @@ The developer implemented a caching mechanism to avoid re-compressing files that
 ![vortex](/assets/images/websockbdoor/vortex.png)
 *Figure 19: Vortexstamp check*
 
-In order to test the capabilities of the backdoor, I created a small C2 implementation to interact with the implant. The following video shows a sample C2 - implant interaction with directory listing and file exfiltration. As it can be observed in the video, when the implant connects to the C2, it sends basic system profiling, including user name, computer name, OS version, IP address, uptime, MAC address, and adapter name using the `[LAL_P]`tag.
+In order to test the capabilities of the backdoor, I created a small C2 implementation to interact with the implant. The following video shows a sample C2 - implant interaction with directory listing and file exfiltration. As it can be observed in the video, when the implant connects to the C2, it sends basic system profiling, including user name, computer name, OS version, IP address, uptime, MAC address, and adapter name using the `[LAL_P]` tag.
 
 
 <video controls playsinline preload="metadata" width="100%">
